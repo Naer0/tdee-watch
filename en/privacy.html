@@ -28,7 +28,7 @@
   <p class="meta">for the iOS app TDEE Watch · Last updated: September 17, 2026</p>
 
   <div class="note">
-    <p><strong>In short:</strong> TDEE Watch processes your data only on your device – and, if you turn it on, in your own private iCloud. The developer runs no server, has no access to your data, and shares nothing with third parties. There is no account, no advertising, no analytics, and no tracking. Health data from Apple Health is never used for advertising or marketing, never sold, and never shared.</p>
+    <p><strong>In short:</strong> TDEE Watch processes your data only on your device – and, if you turn it on, in your own private iCloud. The developer runs no server, has no access to your data, and shares nothing with third parties. There is no account, no advertising, no analytics, and no tracking. Purchases and subscriptions are handled entirely by Apple; the developer receives no payment or contact details from them. Health data from Apple Health is never used for advertising or marketing, never sold, and never shared.</p>
   </div>
 
   <nav class="toc" aria-label="Contents">
@@ -40,6 +40,7 @@
       <li><a href="#storage">Storage location and recipients</a></li>
       <li><a href="#healthkit">Apple Health (HealthKit)</a></li>
       <li><a href="#icloud">iCloud sync</a></li>
+      <li><a href="#purchases">Purchases and subscriptions</a></li>
       <li><a href="#tracking">No tracking, no advertising</a></li>
       <li><a href="#retention">Retention and deletion</a></li>
       <li><a href="#withdraw">Withdrawing access</a></li>
@@ -77,11 +78,14 @@
     <dt>Plan data (created in the app)</dt>
     <dd>Your goal (lose, maintain, gain), the computed calorie budget, plan history, weekly check-ins, days you have marked (e.g. excluded days), and calculation settings.</dd>
 
+    <dt>Purchase status (supplied by Apple)</dt>
+    <dd>Whether your Apple Account holds a valid entitlement to the paid features, which kind of product it is and – for a subscription – how long it runs. This comes from Apple, is evaluated on the device only, and contains no payment details whatsoever; see <a href="#purchases">section 7</a>.</dd>
+
     <dt>Derived values</dt>
     <dd>Weight trend, estimated energy expenditure (TDEE) and plan progress. They are computed on your device from the data above.</dd>
   </dl>
 
-  <p>The app does <strong>not</strong> process your name, email address (unless you write to us), location, contacts, photos, advertising identifiers, device identifiers, usage statistics or crash reports. There is no user account.</p>
+  <p>The app does <strong>not</strong> process your name, email address (unless you write to us), location, contacts, photos, advertising identifiers, device identifiers, usage statistics, crash reports, or payment and billing details. There is no user account.</p>
 
   <h2 id="purposes">3. Purposes and legal bases</h2>
   <p>Data is processed solely for the following purposes:</p>
@@ -90,21 +94,23 @@
     <li>creating and adjusting a calorie budget for your goal, including weekly check-ins;</li>
     <li>showing your history and progress;</li>
     <li>saving the weights you enter to Apple Health so they are available there and across your devices;</li>
-    <li>at your request: syncing profile and plan data between your devices via iCloud.</li>
+    <li>at your request: syncing profile and plan data between your devices via iCloud;</li>
+    <li>checking whether your Apple Account has unlocked the app's paid features.</li>
   </ul>
   <p>Legal bases:</p>
   <ul>
     <li><strong>Art. 6(1)(b) GDPR</strong> (performance of a contract / providing the functions you request) for processing your profile and plan data on the device.</li>
-    <li><strong>Art. 9(2)(a) in conjunction with Art. 6(1)(a) GDPR</strong> (explicit consent) for health data. You give this consent in the Apple Health permission dialog when setting up the app and can withdraw it at any time (see <a href="#withdraw">section 9</a>).</li>
+    <li><strong>Art. 9(2)(a) in conjunction with Art. 6(1)(a) GDPR</strong> (explicit consent) for health data. You give this consent in the Apple Health permission dialog when setting up the app and can withdraw it at any time (see <a href="#withdraw">section 10</a>).</li>
     <li><strong>Art. 6(1)(a) GDPR</strong> (consent) for the optional iCloud sync, which you explicitly turn on in the app's settings and can turn off at any time.</li>
+    <li><strong>Art. 6(1)(b) GDPR</strong> (performance of a contract) for checking your entitlement on the device, without which the paid features cannot be provided (see <a href="#purchases">section 7</a>). For the payment itself, Apple is the controller in its own right.</li>
   </ul>
   <p>Withdrawing consent does not affect the lawfulness of processing carried out before the withdrawal.</p>
 
   <h2 id="storage">4. Storage location and recipients</h2>
   <p><strong>On your device.</strong> All data is stored locally on your iPhone or iPad (in the app's preferences and in JSON files inside the app's protected storage). It is covered by iOS device protection and – if you use it – is part of your device backup (iCloud Backup or a local backup), which Apple manages under Apple's terms of service.</p>
   <p><strong>Optionally in your private iCloud.</strong> Only if you turn on sync does the app transfer the data listed in <a href="#icloud">section 6</a> to the private CloudKit database of your Apple Account. The sole recipient is then Apple, acting as a processor within the meaning of Art. 28 GDPR; the <a href="https://www.apple.com/legal/internet-services/icloud/" rel="noopener">iCloud Terms of Service</a> and <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's Privacy Policy</a> apply. The developer has no access to the private database.</p>
-  <p><strong>No sharing with third parties.</strong> The developer runs no server of his own, receives none of your data, and passes no data on to third parties – not for advertising, analytics or any other purpose. The developer transfers no data to third countries. Apart from the iCloud sync you request, the app opens no connections to any server.</p>
-  <p><strong>Purchase via the App Store.</strong> Apple handles the purchase of the app. The developer receives no personal data from it, only aggregated sales statistics. Apple's Privacy Policy applies to the purchase.</p>
+  <p><strong>No sharing with third parties.</strong> The developer runs no server of his own, receives none of your data, and passes no data on to third parties – not for advertising, analytics or any other purpose. The developer transfers no data to third countries. The only connections the app opens are to Apple: the iCloud sync you request, and the App Store, to retrieve your entitlement and the prices that apply in your country. There is no developer-run server.</p>
+  <p><strong>Purchases via the App Store.</strong> The download is free; you buy the paid features through your Apple Account. Billing is entirely Apple's. The developer receives no personal data from it, only aggregated sales statistics. Details are in <a href="#purchases">section 7</a>.</p>
 
   <h2 id="healthkit">5. Apple Health (HealthKit)</h2>
   <p>The app accesses Apple Health only if you allow it in the iOS permission dialog. You can grant or deny reading and writing separately; without Health access the app works only in a limited way, because it then receives no weight or calorie data.</p>
@@ -128,13 +134,21 @@
     <li>calculation settings.</li>
   </ul>
   <p>Weight and calorie data are <strong>not synced</strong>. The app reads them from Apple Health on each device.</p>
-  <p>The private CloudKit database is part of your iCloud storage and accessible only with your Apple Account. Apple processes this data as a processor; the developer can neither view nor analyse it. You can turn sync off at any time and delete the data stored in iCloud (see <a href="#retention">section 8</a>).</p>
+  <p>The private CloudKit database is part of your iCloud storage and accessible only with your Apple Account. Apple processes this data as a processor; the developer can neither view nor analyse it. You can turn sync off at any time and delete the data stored in iCloud (see <a href="#retention">section 9</a>).</p>
 
-  <h2 id="tracking">7. No tracking, no advertising, no analytics</h2>
+  <h2 id="purchases">7. Purchases and subscriptions</h2>
+  <p>The app is free to download. After onboarding, a purchase unlocks the remaining features: a monthly or yearly subscription from the "TDEE Watch Pro" subscription group, or a one-time purchase that lasts indefinitely. The app shows the prices that currently apply as supplied by the App Store.</p>
+  <p><strong>Apple does the billing, not the developer.</strong> The purchase and the payment happen solely between you and Apple. Your payment, billing and account details are processed by Apple alone, which acts as a controller in its own right for them; <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's Privacy Policy</a> applies. The developer receives <strong>no personal data</strong> out of a purchase – not your name, not your email address, not your payment method, and no identifier of your Apple Account. What he sees in App Store Connect is aggregated sales and subscription figures that cannot be traced to any individual.</p>
+  <p><strong>What the app itself processes.</strong> Through StoreKit, Apple's purchasing interface, the app asks the App Store whether your Apple Account holds a valid entitlement. All that comes back is the purchase status – entitled or not, the kind of product and, for a subscription, the date of the next renewal. That status is evaluated on the device only. It is never transmitted to the developer and is not synced via iCloud: Apple supplies it on each of your devices itself.</p>
+  <p><strong>No account with the developer.</strong> The entitlement belongs to your Apple Account. Buying creates no account with the developer and sends him no data of yours. "Restore purchases" – on the paywall and in the app's settings – simply asks Apple again what is on file for your account. The one-time purchase is enabled for Family Sharing; whether and with whom you share it is up to you in iOS Settings, and the developer learns nothing about it.</p>
+  <p><strong>Renewal and cancellation.</strong> Subscriptions renew automatically until you cancel. You cancel in your App Store settings (Settings → [your name] → Subscriptions), not in the app; the developer can neither see nor initiate a cancellation. Refunds, too, are handled exclusively by Apple.</p>
+  <p><strong>Your data stays.</strong> When a subscription ends, the app only locks the view. Nothing is deleted – your profile, plan, history and check-ins remain on the device and, if you enabled sync, in your iCloud (see <a href="#retention">section 9</a>).</p>
+
+  <h2 id="tracking">8. No tracking, no advertising, no analytics</h2>
   <p>TDEE Watch contains no advertising, no analytics or crash-reporting services, and no third-party software components (SDKs). The app uses no advertising identifier, no cookies and no other identifiers to track you across apps or websites. The developer collects no usage statistics.</p>
   <p>This website likewise sets no cookies and uses no analytics. It is served by GitHub Pages; when you load it, GitHub (GitHub, Inc.) processes technically necessary connection data such as your IP address under the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub Privacy Statement</a>.</p>
 
-  <h2 id="retention">8. Retention and deletion</h2>
+  <h2 id="retention">9. Retention and deletion</h2>
   <p>Your data is kept for as long as you want to keep it. There is no automatic deletion period, because the data is available only to you. You delete it yourself:</p>
   <ul>
     <li><strong>In the app:</strong> "Delete all data" in Settings removes all locally stored data and – if enabled – the app's data in your iCloud.</li>
@@ -142,30 +156,31 @@
     <li><strong>iCloud:</strong> you can additionally remove the app's iCloud data via iOS Settings (Settings → [your name] → iCloud → Manage Account Storage → TDEE Watch).</li>
     <li><strong>Deleting the app:</strong> removing the app deletes all local app data. Data stored in Apple Health and in iCloud remains until you delete it there.</li>
   </ul>
+  <p>The end of a subscription is <strong>not</strong> a reason to delete anything: the app locks the view but leaves your data untouched on the device and in your iCloud. Your weight and calorie data live in Apple Health anyway and stay there regardless of the app and its purchase status.</p>
 
-  <h2 id="withdraw">9. Withdrawing access</h2>
+  <h2 id="withdraw">10. Withdrawing access</h2>
   <ul>
     <li><strong>Apple Health:</strong> Settings → Health → Data Access &amp; Devices → TDEE Watch (or in the Health app under Profile → Apps). There you can revoke read and write access individually.</li>
-    <li><strong>iCloud sync:</strong> turn it off in the app's settings. Data already stored in iCloud remains until you delete it (see <a href="#retention">section 8</a>).</li>
+    <li><strong>iCloud sync:</strong> turn it off in the app's settings. Data already stored in iCloud remains until you delete it (see <a href="#retention">section 9</a>).</li>
   </ul>
 
-  <h2 id="rights">10. Your rights</h2>
+  <h2 id="rights">11. Your rights</h2>
   <p>As a data subject you have the following rights under the GDPR. Because the developer has no access to your data, you can exercise most of them directly in the app:</p>
   <ul>
     <li><strong>Access (Art. 15):</strong> all data the app processes is visible in the app itself. You can also export it in full using the export function.</li>
     <li><strong>Rectification (Art. 16):</strong> change profile and plan data in the app; change weight and calorie data in the app (your own entries) or in the Health app.</li>
-    <li><strong>Erasure (Art. 17):</strong> "Delete all data" in the app, see <a href="#retention">section 8</a>.</li>
+    <li><strong>Erasure (Art. 17):</strong> "Delete all data" in the app, see <a href="#retention">section 9</a>.</li>
     <li><strong>Data portability (Art. 20):</strong> on request the app exports your data as a JSON file in a common, machine-readable format.</li>
-    <li><strong>Restriction of processing (Art. 18) and objection (Art. 21):</strong> revoke the app's Health access or turn off iCloud sync, see <a href="#withdraw">section 9</a>.</li>
-    <li><strong>Withdrawal of consent (Art. 7(3)):</strong> at any time, as described in <a href="#withdraw">section 9</a>.</li>
+    <li><strong>Restriction of processing (Art. 18) and objection (Art. 21):</strong> revoke the app's Health access or turn off iCloud sync, see <a href="#withdraw">section 10</a>.</li>
+    <li><strong>Withdrawal of consent (Art. 7(3)):</strong> at any time, as described in <a href="#withdraw">section 10</a>.</li>
     <li><strong>Complaint (Art. 77):</strong> you have the right to lodge a complaint with a data protection supervisory authority, in particular in the EU member state of your habitual residence, place of work or the place of the alleged infringement. The German supervisory authorities are listed by the <a href="https://www.bfdi.bund.de/EN/Service/Anschriften/Laender/Laender-node.html" rel="noopener">Federal Commissioner for Data Protection and Freedom of Information</a>.</li>
   </ul>
   <p>For privacy questions, contact the controller at <a href="mailto:jarno.sch.dev@proton.me">jarno.sch.dev@proton.me</a>. Please do not send health data by email unless it is needed to answer your question.</p>
 
-  <h2 id="children">11. Children</h2>
+  <h2 id="children">12. Children</h2>
   <p>TDEE Watch is not directed at children. The app is rated 4+ in the App Store because it contains no objectionable content; calorie and weight goals, however, are intended for adults. The developer does not knowingly collect data from children – as described, the developer collects no data at all.</p>
 
-  <h2 id="changes">12. Changes to this policy</h2>
+  <h2 id="changes">13. Changes to this policy</h2>
   <p>If the app's features change, this policy will be updated. The current version is always available at this address and linked from within the app; the date of the last change appears at the top of the page.</p>
 
   <p class="meta">Last updated: September 17, 2026</p>

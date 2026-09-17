@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Support &amp; FAQ – TDEE Watch</title>
-  <meta name="description" content="Frequently asked questions about TDEE Watch: the estimate, how much data it needs, calorie apps, iCloud sync, deleting your data – and how to reach the developer.">
+  <meta name="description" content="Frequently asked questions about TDEE Watch: the estimate, how much data it needs, calorie apps, subscriptions and purchases, iCloud sync, deleting your data – and how to reach the developer.">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -37,6 +37,11 @@
       <li><a href="#apps">Which calorie apps work?</a></li>
       <li><a href="#activity">Why doesn't the app use activity calories?</a></li>
       <li><a href="#units">Can I use pounds instead of kilograms?</a></li>
+      <li><a href="#price">What does the app cost – and what is free?</a></li>
+      <li><a href="#cancel">How do I cancel my subscription?</a></li>
+      <li><a href="#after-subscription">What happens to my data when my subscription ends?</a></li>
+      <li><a href="#restore">I paid and still see the paywall – what now?</a></li>
+      <li><a href="#family">Does Family Sharing work?</a></li>
       <li><a href="#icloud">How does iCloud sync work – and what isn't synced?</a></li>
       <li><a href="#delete">How do I delete my data?</a></li>
       <li><a href="#ipad">Does the app work on iPad?</a></li>
@@ -78,6 +83,49 @@
     <p>Yes. Under Settings → Units you can switch between metric (kg, cm) and imperial (lb, ft/in); you can also pick this during onboarding. Internally the app always calculates in kilograms and kilocalories, so the result is correct regardless of which unit your scale or tracking app writes to Apple Health.</p>
   </article>
 
+  <article class="faq-item" id="price">
+    <h2>What does the app cost – and what is free?</h2>
+    <p>Downloading costs nothing. You can go through onboarding and connect Apple Health without paying – after that, a purchase unlocks the app: Today, Plan, History and Settings. There are three ways in: a monthly subscription, a yearly subscription that starts with a <strong>free month</strong>, and a one-time purchase that lasts indefinitely and never renews.</p>
+    <p>I deliberately don't quote prices here: they differ by country and can change. What applies in your App Store is shown on the paywall inside the app and on the App Store product page – always in your own currency.</p>
+    <p>Why a free <em>month</em> rather than a free week: the app needs roughly two weeks of weight and calorie data before it shows a <em>measured</em> expenditure instead of a formula estimate (see <a href="#days">"How many days of data does the app need?"</a>). A week would be over before you ever saw the thing the app is built for.</p>
+    <p>Both subscriptions renew automatically until you cancel. Billing runs through your Apple Account; there is no account with the developer.</p>
+  </article>
+
+  <article class="faq-item" id="cancel">
+    <h2>How do I cancel my subscription?</h2>
+    <p>Subscriptions are managed by Apple, not by the app – so you cancel in the App Store: <strong>Settings → [your name] → Subscriptions → TDEE Watch → Cancel Subscription</strong>. The same screen is where you switch between the monthly and the yearly plan. The app's Settings have a shortcut that opens exactly that screen.</p>
+    <p>Cancel at least 24 hours before the current period ends, otherwise Apple renews once more. Your access stays until the end of the period you have already paid for. The same goes for the free month on the yearly plan: cancel within it and nothing is charged.</p>
+    <p>Billing and refunds are Apple's too (<a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>). I can't see your payments or whether you have cancelled, and I can't change either.</p>
+  </article>
+
+  <article class="faq-item" id="after-subscription">
+    <h2>What happens to my data when my subscription ends?</h2>
+    <p>Nothing is lost. When a subscription runs out, the app only locks the view – it deletes nothing. Your profile, plan, plan history, check-ins and settings stay on the device and, if you turned sync on, in your iCloud. Buy again later and you pick up exactly where you left off.</p>
+    <p>Your weight and calorie data live in Apple Health anyway and belong to you independently of this app: they stay visible there and usable by any other app, even while TDEE Watch is locked.</p>
+    <p>You can reach your data without buying anything: at the bottom of the paywall there is "Export or delete your data". Behind it sit the same JSON export and the same delete function as in Settings. No purchase and no restore needed.</p>
+    <p>If you do want your data gone, see <a href="#delete">"How do I delete my data?"</a> – deleting the app and removing its iCloud data from iOS Settings works whether or not a purchase is active.</p>
+  </article>
+
+  <article class="faq-item" id="restore">
+    <h2>I paid and still see the paywall – what now?</h2>
+    <p>Your access belongs to your Apple Account, not to an account with me. So on a new device, after a reinstall, or after switching phones, tap <strong>"Restore purchases"</strong> – it's on the paywall and in the app's Settings. The app then asks Apple and unlocks whatever is on file for your account.</p>
+    <p>If the paywall stays, check in this order:</p>
+    <ul>
+      <li>Are you signed in to the App Store with the same Apple Account you bought with? (Settings → [your name] → Media &amp; Purchases)</li>
+      <li>Is the device online? Without a connection the app can't confirm the purchase.</li>
+      <li>Is your subscription still running? (Settings → [your name] → Subscriptions)</li>
+      <li>For a shared purchase: is purchase sharing switched on for your family group? See the <a href="#family">next question</a>.</li>
+    </ul>
+    <p>If none of that helps, write to me – ideally with the purchase date and Apple's receipt.</p>
+  </article>
+
+  <article class="faq-item" id="family">
+    <h2>Does Family Sharing work?</h2>
+    <p>For the one-time purchase, yes: it is enabled for Family Sharing, so your family group can use the app without paying a second time – provided purchase sharing is switched on for the group. Everyone still works with their own data; what's shared is access, not your profile or your plan.</p>
+    <p>The two subscriptions can't be shared through Family Sharing; they stay tied to the Apple Account that bought them.</p>
+    <p>Across your own devices – iPhone and iPad, say – every purchase counts once, as long as both are signed in to the same Apple Account.</p>
+  </article>
+
   <article class="faq-item" id="icloud">
     <h2>How does iCloud sync work – and what isn't synced?</h2>
     <p>Sync is off by default. You turn it on in the app's settings. After that, the app keeps the following data in sync between your devices via your Apple Account: profile (age, height, sex), current plan and plan history, weekly check-ins, day markings and calculation settings.</p>
@@ -98,7 +146,7 @@
 
   <article class="faq-item" id="ipad">
     <h2>Does the app work on iPad?</h2>
-    <p>Yes, TDEE Watch is a universal app for iPhone and iPad (iOS / iPadOS 26 or later) and is included in a single purchase. Note that Apple Health on iPad only shows data if Health sync via iCloud is turned on (Settings → [your name] → iCloud → Health). Without that setting, the app sees no weight or calorie data on the iPad.</p>
+    <p>Yes, TDEE Watch is a universal app for iPhone and iPad (iOS / iPadOS 26 or later); your purchase covers both, because it belongs to your Apple Account. Note that Apple Health on iPad only shows data if Health sync via iCloud is turned on (Settings → [your name] → iCloud → Health). Without that setting, the app sees no weight or calorie data on the iPad.</p>
     <p>There is currently no Apple Watch or Mac version.</p>
   </article>
 
@@ -116,6 +164,7 @@
     <li>the app version (at the bottom of the app's Settings),</li>
     <li>what you expected and what happened instead – a screenshot often helps.</li>
   </ul>
+  <p>For anything to do with billing, receipts or refunds, Apple will help you faster than I can: payments run entirely through the App Store and I have no access to them. Everything else – features, numbers, bugs – is mine.</p>
   <p>Please don't send health data unless it's really needed. And don't worry: I have no access to the data in your app – I only see what you write to me.</p>
 
   <hr>
