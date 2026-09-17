@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support &amp; FAQ – TDEE Watch</title>
+  <meta name="description" content="Häufige Fragen zu TDEE Watch: Schätzung, Datenbedarf, Kalorien-Apps, iCloud-Sync, Daten löschen – und wie du den Entwickler erreichst.">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="./index.html">TDEE Watch</a>
+  <nav aria-label="Seiten">
+    <a href="./privacy.html">Datenschutz</a>
+    <a href="./support.html" aria-current="page">Support</a>
+  </nav>
+  <nav class="lang" aria-label="Sprache">
+    <a href="./support.html" aria-current="page" lang="de">DE</a>
+    <span aria-hidden="true">|</span>
+    <a href="./en/support.html" lang="en" hreflang="en">EN</a>
+  </nav>
+</header>
+
+<main>
+
+  <h1>Support &amp; FAQ</h1>
+  <p class="meta">TDEE Watch für iPhone und iPad · Version 1.0 · Stand: 17. September 2026</p>
+
+  <p class="lead">Die meisten Fragen beantworten sich hier. Wenn nicht: Unten steht, wie du mich erreichst.</p>
+
+  <nav class="toc" aria-label="Fragen">
+    <strong>Fragen</strong>
+    <ol>
+      <li><a href="#haelt">Warum steht bei der Schätzung „hält“ – und warum dauert das?</a></li>
+      <li><a href="#tage">Wie viele Tage Daten braucht die App?</a></li>
+      <li><a href="#apps">Welche Kalorien-Apps funktionieren?</a></li>
+      <li><a href="#aktivitaet">Warum berücksichtigt die App keine Aktivitätskalorien?</a></li>
+      <li><a href="#einheiten">Kann ich Pfund statt Kilogramm verwenden?</a></li>
+      <li><a href="#icloud">Wie funktioniert die iCloud-Synchronisierung – und was wird nicht synchronisiert?</a></li>
+      <li><a href="#loeschen">Wie lösche ich meine Daten?</a></li>
+      <li><a href="#ipad">Läuft die App auf dem iPad?</a></li>
+      <li><a href="#bearbeiten">Warum kann ich manche Gewichtseinträge nicht bearbeiten?</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ol>
+  </nav>
+
+  <article class="faq-item" id="haelt">
+    <h2>Warum steht bei der Schätzung „hält“ – und warum dauert das?</h2>
+    <p>Die App leitet deinen Energiebedarf aus zwei Dingen ab: wie sich dein Gewicht über die Zeit entwickelt, und wie viele Kalorien du in dieser Zeit gegessen hast. Beides braucht Zeit, um aussagekräftig zu werden – das Körpergewicht schwankt von Tag zu Tag um ein Kilo und mehr (Wasser, Salz, Verdauung), ohne dass sich an deinem Fettanteil etwas geändert hat. Erst der Trend über mehrere Tage sagt etwas aus.</p>
+    <p>„Hält“ bedeutet: Im Moment kommen nicht genug neue, verwertbare Daten herein, um die Schätzung weiterzuentwickeln – etwa weil du dich einige Tage nicht gewogen oder keine Kalorien protokolliert hast, oder weil Tage als ausgeschlossen markiert sind. Statt so zu tun, als wäre der letzte Wert brandaktuell, behält die App ihn ehrlich bei und sagt dir, dass er gerade nur gehalten wird. Sobald wieder Gewichts- und Kaloriendaten eintreffen, läuft die Schätzung weiter.</p>
+    <p>Kurz: Regelmäßig wiegen (am besten täglich, morgens, nach dem Toilettengang, vor dem Frühstück) und Kalorien lückenlos erfassen – dann bewegt sich die Schätzung auch.</p>
+  </article>
+
+  <article class="faq-item" id="tage">
+    <h2>Wie viele Tage Daten braucht die App?</h2>
+    <p>Am ersten Tag startet die App mit einer Formel-Schätzung aus deinem Profil (Alter, Größe, Geschlecht, aktuelles Gewicht). Diese wird Schritt für Schritt durch die gemessene Realität ersetzt.</p>
+    <p>Als Faustregel: Nach etwa zwei Wochen mit täglicher Wiegung und vollständigem Kalorienprotokoll ist die Schätzung deutlich besser als jede Formel; nach vier bis sechs Wochen ist sie stabil. Je lückenloser die Daten, desto schneller. Einzelne fehlende Tage sind kein Problem – lange Lücken oder unvollständig protokollierte Tage (z.&nbsp;B. das Wochenende „vergessen“) verzerren die Rechnung dagegen spürbar. Solche Tage kannst du in der App als ausgeschlossen markieren, damit sie nicht in die Rechnung eingehen.</p>
+    <p>Wenn du schon länger Gewicht und Kalorien in Apple Health erfasst, nutzt die App auch diese Historie – dann geht es entsprechend schneller.</p>
+  </article>
+
+  <article class="faq-item" id="apps">
+    <h2>Welche Kalorien-Apps funktionieren?</h2>
+    <p>Alle, die ihre Nahrungsenergie in Apple Health schreiben. TDEE Watch hat keine eigene Lebensmittel-Datenbank und liest die gegessenen Kalorien ausschließlich aus Apple Health – du kannst also deine gewohnte Tracking-App weiterverwenden.</p>
+    <p>So prüfst du, ob deine App in Health schreibt: Health-App → Entdecken → Ernährung → Nahrungsenergie → ganz unten „Datenquellen &amp; Zugriff“. Steht deine Tracking-App dort, passt alles. Falls nicht, aktiviere in den Einstellungen deiner Tracking-App die Health-Anbindung (meist unter „Integrationen“, „Apple Health“ oder „Verbundene Apps“) und erlaube das Schreiben von Nahrungsenergie.</p>
+    <p>Das Gleiche gilt für Waagen: Smarte Waagen, die ihr Gewicht in Apple Health ablegen, werden automatisch erkannt. Du kannst dein Gewicht aber auch direkt in TDEE Watch eintragen.</p>
+  </article>
+
+  <article class="faq-item" id="aktivitaet">
+    <h2>Warum berücksichtigt die App keine Aktivitätskalorien?</h2>
+    <p>Weil sie es nicht muss – und weil es die Rechnung schlechter machen würde.</p>
+    <p>Der Energiebedarf, den TDEE Watch berechnet, ergibt sich aus der Energiebilanz: gegessene Kalorien gegenüber der Gewichtsveränderung. Alles, was du an Energie verbrauchst – Grundumsatz, Alltag, Sport, Verdauung –, steckt in dieser Bilanz bereits drin. Der Aktivitätswert einer Uhr obendrauf würde doppelt zählen.</p>
+    <p>Dazu kommt: Die Aktivitätskalorien von Wearables sind für einzelne Personen notorisch ungenau, häufig um mehrere hundert Kilokalorien am Tag. Deshalb liest die App bewusst keinen Aktiv- oder Grundumsatz aus Apple Health. Wenn du mehr Sport machst, siehst du das trotzdem – dein gemessener Bedarf steigt nach ein paar Wochen von selbst.</p>
+  </article>
+
+  <article class="faq-item" id="einheiten">
+    <h2>Kann ich Pfund statt Kilogramm verwenden?</h2>
+    <p>Ja. Unter Einstellungen → Einheiten wählst du zwischen metrisch (kg, cm) und imperial (lb, ft/in); du kannst das auch schon im Onboarding festlegen. Intern rechnet die App immer in Kilogramm und Kilokalorien, deshalb stimmt die Berechnung unabhängig davon, in welcher Einheit deine Waage oder Tracking-App in Apple Health schreibt.</p>
+  </article>
+
+  <article class="faq-item" id="icloud">
+    <h2>Wie funktioniert die iCloud-Synchronisierung – und was wird nicht synchronisiert?</h2>
+    <p>Die Synchronisierung ist standardmäßig aus. Du schaltest sie in den Einstellungen der App ein. Danach gleicht die App folgende Daten über deinen Apple-Account zwischen deinen Geräten ab: Profil (Alter, Größe, Geschlecht), aktueller Plan und Plan-Historie, wöchentliche Check-ins, Tagesmarkierungen und Berechnungseinstellungen.</p>
+    <p><strong>Nicht synchronisiert</strong> werden Gewichts- und Kaloriendaten. Die liest die App auf jedem Gerät direkt aus Apple Health – und Apple Health hat seine eigene Synchronisierung (Einstellungen → [Dein Name] → iCloud → „Health“ einschalten). Wenn auf dem zweiten Gerät also Gewicht oder Kalorien fehlen, liegt das an der Health-Synchronisierung, nicht an der App.</p>
+    <p>Die Daten liegen in der privaten iCloud-Datenbank deines Apple-Accounts. Niemand außer dir – auch nicht der Entwickler – kann darauf zugreifen. Sie belegen einen winzigen Teil deines iCloud-Speichers. Du kannst die Synchronisierung jederzeit wieder ausschalten; die Daten auf den Geräten bleiben dann erhalten, werden aber nicht mehr abgeglichen.</p>
+  </article>
+
+  <article class="faq-item" id="loeschen">
+    <h2>Wie lösche ich meine Daten?</h2>
+    <ul>
+      <li><strong>Alles auf einmal:</strong> Einstellungen in der App → „Alle Daten löschen“. Das entfernt Profil, Plan, Historie, Check-ins und Einstellungen vom Gerät und – falls die Synchronisierung eingeschaltet ist – auch die Daten der App aus deiner iCloud.</li>
+      <li><strong>Gewichte und Kalorien in Apple Health:</strong> Die verwaltest du in der Health-App. Gewichtseinträge, die du in TDEE Watch gemacht hast, kannst du auch direkt in der App löschen. Um alles auf einmal zu entfernen, was die App in Health geschrieben hat: Health-App → Profilbild → Apps → TDEE Watch → „Alle Daten von TDEE Watch löschen“.</li>
+      <li><strong>iCloud manuell:</strong> Einstellungen → [Dein Name] → iCloud → Accountspeicher verwalten → TDEE Watch → Daten löschen.</li>
+      <li><strong>App löschen:</strong> Entfernt alle lokalen Daten der App. Was in Apple Health und iCloud liegt, bleibt, bis du es dort löschst.</li>
+    </ul>
+    <p>Vor dem Löschen kannst du deine Daten in den Einstellungen als JSON-Datei exportieren – falls du sie später noch einmal brauchst.</p>
+  </article>
+
+  <article class="faq-item" id="ipad">
+    <h2>Läuft die App auf dem iPad?</h2>
+    <p>Ja, TDEE Watch ist eine universelle App für iPhone und iPad (iOS bzw. iPadOS 26 oder neuer) und in einem Kauf enthalten. Beachte: Apple Health auf dem iPad zeigt nur Daten, wenn die Health-Synchronisierung über iCloud eingeschaltet ist (Einstellungen → [Dein Name] → iCloud → Health). Ohne diese Einstellung sieht die App auf dem iPad keine Gewichts- oder Kaloriendaten.</p>
+    <p>Eine Version für Apple Watch oder Mac gibt es derzeit nicht.</p>
+  </article>
+
+  <article class="faq-item" id="bearbeiten">
+    <h2>Warum kann ich manche Gewichtseinträge nicht bearbeiten?</h2>
+    <p>Das ist eine Regel von Apple Health: Eine App darf nur die Einträge ändern oder löschen, die sie selbst geschrieben hat. Gewichte, die du in TDEE Watch eingegeben hast, kannst du deshalb in der App bearbeiten und löschen. Werte, die von deiner Waage, einer anderen App oder direkt in der Health-App stammen, zeigt TDEE Watch zwar an, kann sie aber nicht verändern.</p>
+    <p>Solche Einträge bearbeitest du an der Quelle – in der Health-App (Entdecken → Körpermaße → Gewicht → „Alle Daten anzeigen“) oder in der App, die den Wert geschrieben hat. Wenn ein Ausreißer die Rechnung stört, du ihn aber nicht löschen möchtest, kannst du den betreffenden Tag in TDEE Watch auch einfach ausschließen.</p>
+  </article>
+
+  <h2 id="kontakt">Kontakt</h2>
+  <p>Ich bin Jarno, Entwickler von TDEE Watch. Fragen, Fehler, Wünsche – schreib mir an <a href="mailto:jarno.sch.dev@proton.me">jarno.sch.dev@proton.me</a>. Ich antworte in der Regel innerhalb weniger Tage, auf Deutsch oder Englisch.</p>
+  <p>Damit ich dir schnell helfen kann, nenn mir bitte:</p>
+  <ul>
+    <li>dein Gerät und die iOS-Version (Einstellungen → Allgemein → Info),</li>
+    <li>die Version der App (unten in den App-Einstellungen),</li>
+    <li>was du erwartet hast und was stattdessen passiert ist – ein Screenshot hilft oft.</li>
+  </ul>
+  <p>Bitte schick keine Gesundheitsdaten mit, es sei denn, es geht ohne sie nicht. Und keine Sorge: Ich habe keinen Zugriff auf die Daten in deiner App – ich sehe nur, was du mir schreibst.</p>
+
+  <hr>
+  <p class="meta">TDEE Watch ist kein Medizinprodukt. Energiebedarf, Gewichtstrend und Kalorienbudget sind Schätzungen und ersetzen keine ärztliche oder ernährungswissenschaftliche Beratung. Sprich Ernährungsumstellungen bei bestehenden Erkrankungen, in der Schwangerschaft oder bei einer Essstörung bitte mit einer Ärztin oder einem Arzt ab.</p>
+
+</main>
+
+<footer class="site-footer">
+  <nav aria-label="Footer">
+    <a href="./index.html">Start</a>
+    <a href="./privacy.html">Datenschutz</a>
+    <a href="./en/support.html" hreflang="en" lang="en">Support (English)</a>
+  </nav>
+  <p>© Jarno Schriever</p>
+</footer>
+
+</body>
+</html>

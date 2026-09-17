@@ -1,0 +1,292 @@
+/* TDEE Watch — docs site (privacy, support, landing).
+   No JavaScript, no external assets. Mobile-first. */
+
+:root {
+  color-scheme: light dark;
+  --bg: #fafaf7;
+  --fg: #1c1e1a;
+  --muted: #5d615a;
+  --accent: #4C8A00;          /* darker green for contrast on light backgrounds */
+  --accent-soft: rgba(76, 138, 0, 0.12);
+  --border: #e3e4de;
+  --card: #ffffff;
+  --code-bg: #f0f1ec;
+  --max-width: 720px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f110d;
+    --fg: #eceee6;
+    --muted: #a4a99b;
+    --accent: #B8FF33;        /* lime, used sparingly */
+    --accent-soft: rgba(184, 255, 51, 0.12);
+    --border: #262a22;
+    --card: #161913;
+    --code-bg: #1c2018;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", Inter, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  padding-inline: 20px;
+  padding-block: 0 48px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover,
+a:focus-visible { text-decoration-thickness: 2px; }
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Header ------------------------------------------------------------- */
+
+.site-header {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-block: 20px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--fg);
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.brand:hover { color: var(--accent); }
+
+.site-header nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.site-header nav a {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.site-header nav a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9375rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.lang a[aria-current="page"] {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Content ------------------------------------------------------------ */
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-top: 8px;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(1.75rem, 5vw, 2.375rem); margin: 32px 0 8px; }
+h2 { font-size: 1.375rem; margin: 40px 0 8px; }
+h3 { font-size: 1.125rem; margin: 28px 0 6px; }
+
+h2 + p,
+h3 + p { margin-top: 0; }
+
+p, ul, ol { margin: 0 0 16px; }
+li { margin-bottom: 6px; }
+li > ul { margin: 6px 0 0; }
+
+.lead { font-size: 1.1875rem; }
+.meta { color: var(--muted); font-size: 0.9375rem; }
+
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.92em;
+  background: var(--code-bg);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 40px 0;
+}
+
+/* Definition lists for the "what is processed" blocks */
+dl { margin: 0 0 16px; }
+dt { font-weight: 600; margin-top: 12px; }
+dd { margin: 2px 0 0 0; }
+
+.note {
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  margin: 20px 0;
+}
+
+.toc {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 24px 0 32px;
+}
+.toc ol { margin: 8px 0 0; padding-left: 20px; }
+.toc li { margin-bottom: 4px; }
+.toc a { color: var(--fg); }
+.toc a:hover { color: var(--accent); }
+
+/* Landing ------------------------------------------------------------ */
+
+.hero { padding-block: 24px 8px; }
+
+.hero .tagline {
+  color: var(--muted);
+  font-size: 1.0625rem;
+  margin-top: 0;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  align-items: center;
+  margin: 20px 0 8px;
+}
+
+.badge-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  min-height: 52px;
+  padding: 10px 18px;
+  border: 1.5px dashed var(--muted);
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  text-decoration: none;
+}
+.badge-placeholder:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: grid;
+  gap: 12px;
+}
+.features li {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 0;
+}
+.features strong { display: block; margin-bottom: 2px; }
+
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin: 16px 0 0;
+}
+.screenshots figure { margin: 0; }
+.screenshots .frame {
+  aspect-ratio: 9 / 19.5;
+  max-width: 100%;
+  border: 1.5px dashed var(--muted);
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.875rem;
+  padding: 12px;
+}
+.screenshots figcaption {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.875rem;
+  margin-top: 6px;
+}
+
+.faq-item { margin-bottom: 8px; }
+
+/* Footer ------------------------------------------------------------- */
+
+.site-footer {
+  max-width: var(--max-width);
+  margin: 56px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-bottom: 8px;
+}
+.site-footer nav a { color: var(--muted); }
+.site-footer nav a:hover { color: var(--accent); }
+.site-footer p { margin: 0 0 6px; }
+
+@media (min-width: 600px) {
+  body { padding-inline: 32px; }
+  .toc ol { columns: 2; column-gap: 32px; }
+}
+
+@media print {
+  body { background: #fff; color: #000; }
+  .site-header nav,
+  .lang,
+  .site-footer nav { display: none; }
+  a { color: #000; }
+}
